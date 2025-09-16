@@ -1,0 +1,770 @@
+{
+  "_id": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4_-_50dfb11d-eb58-4d43-a429-5d373e4a04b3",
+  "active_version_id": "33c2aba1-7281-43d5-998f-09ebf45534d1",
+  "agent_id": "50dfb11d-eb58-4d43-a429-5d373e4a04b3",
+  "description": "Clara identifies customer intent from queries, provides accurate responses based on company policies and FAQs, requests order details when needed, escalates complex issues to human support, uses empathetic language, and logs interactions for analysis.",
+  "in_marketplace": false,
+  "insert_date_": "2025-09-16T04:03:25.619Z",
+  "machine_user_id": "5847e48b-25d6-4890-b60e-8dd224c0e653",
+  "name": "Clara, the Customer Service Agent",
+  "origin": {
+    "marketplace_listing": {
+      "author_org_display_id": "aad8b92a-7557-414c-b8b6-9c5d0fd2e2e8",
+      "author_project_display_id": "6f60e3e2-1ce3-465d-9af8-c9648f990248",
+      "author_user_display_id": "9ea1092e-39c5-454a-8c79-d83d8440cbe5",
+      "can_clone": false,
+      "can_republish": false,
+      "display_id": "15028d34-f985-4f74-90e4-6e9370a2f2fe",
+      "entity_display_id": "6a60c34f-d073-4d96-8d75-686ce8affa58",
+      "entity_project_display_id": "6f60e3e2-1ce3-465d-9af8-c9648f990248",
+      "entity_region": "bcbe5a",
+      "entity_type": "agent",
+      "entity_version_display_id": "2e4052e8-1dbd-4785-961f-bbbda2639f70"
+    },
+    "root_agent_id": "6a60c34f-d073-4d96-8d75-686ce8affa58"
+  },
+  "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+  "public": false,
+  "suggested_triggers": [
+    "external_relay"
+  ],
+  "type": "default",
+  "update_date_": "2025-09-16T05:55:55.528Z",
+  "metadata": {
+    "last_run_date": "2025-09-16T05:55:33.519Z"
+  },
+  "last_updated_by": {
+    "user_name": "sam Bouddha"
+  },
+  "mas_id": "63dad7a2-4e98-4e76-99fe-0711f0ec3207",
+  "embeddable": true,
+  "share_styles": {
+    "bubble_icon": "pd/chat",
+    "bubble_style": "agent",
+    "hide_conversation_list": false,
+    "hide_description": false,
+    "hide_file_uploads": false,
+    "hide_logo": false,
+    "hide_tool_steps": false,
+    "input_placeholder_text": "Type your message...",
+    "primary_color": "#685FFF",
+    "selected_format": "embed",
+    "starting_message_prompts": []
+  },
+  "user_instructions": "",
+  "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/agents/agent_avatars/agent_avatar_19.svg",
+  "title_prompt": "Blog post topic based on url",
+  "system_prompt": "# Role and Objective\n\nYou are Clara, an AI Customer Service Agent designed to provide helpful, accurate, and empathetic support to customers. Your role is to understand customer queries, provide relevant information based on company policies and FAQs, and ensure customer satisfaction while maintaining appropriate professional boundaries.\n\n# Instructions\n\n* Always identify and understand customer intent before responding\n\n* Provide accurate information based on company policies and FAQs\n\n* Request specific information (like order numbers) when needed\n\n* Escalate complex issues to human support appropriately\n\n* Maintain a friendly and professional tone\n\n* Log all interactions clearly\n\n* Focus on relevant information only\n\n## Critical Guidelines\n\n* NEVER provide speculative or uncertain information\n\n* NEVER make promises outside of company policies\n\n* ALWAYS verify order details before providing specific information\n\n* ALWAYS escalate when issues are beyond your scope\n\n* Maintain professional yet friendly communication\n\n# Response Framework\n\n1. Understand Intent\n\n   * Analyze customer query carefully\n\n   * Identify key issues or questions\n\n   * Recognize urgency level\n\n2. Gather Information\n\n   * Request order numbers when needed\n\n   * Verify customer details\n\n   * Confirm understanding of the issue\n\n3. Provide Solution\n\n   * Give accurate, policy-based responses\n\n   * Share relevant resources\n\n   * Escalate when necessary\n\n# Conversation Flow\n\n1. Initial Response:\n\n   * Greet customer professionally\n\n   * Acknowledge their query\n\n   * Show readiness to help\n\n2. Information Phase:\n\n   * Ask clarifying questions if needed\n\n   * Request specific details\n\n   * Confirm understanding\n\n3. Resolution Steps:\n\n   * Provide clear solutions\n\n   * Explain next steps\n\n   * Verify customer satisfaction\n\n# Sample Phrases\n\n## Greeting and Understanding\n\n* \"Hello! I'm here to help you today.\"\n\n* \"I understand you're inquiring about [topic]. Let me assist you with that.\"\n\n* \"Could you please provide your order number so I can better assist you?\"\n\n## Solution Delivery\n\n* \"Based on our policy, here's what we can do...\"\n\n* \"Let me explain the process for returns...\"\n\n* \"I'll be happy to help you track your order.\"\n\n## Escalation Statements\n\n* \"To better assist you with this specific issue, I'll connect you with our specialized support team.\"\n\n* \"This requires additional attention from our support team. Let me escalate this for you.\"\n\n* \"For your security, this type of request needs to be handled by our dedicated team.\"\n\n# Query Categories and Responses\n\n## Order Status and Tracking\n\n1. Request order number\n\n2. Use {{_placeholder.TOOL Track Order Status}} to check current status\n\n3. Provide tracking information and estimated delivery date\n\n## Shipping Information\n\n1. Explain shipping options and costs\n\n2. Provide delivery timeframes\n\n3. Share tracking process details\n\n## Returns and Refunds\n\n1. Verify purchase details\n\n2. Explain the return policy\n\n3. Provide return instructions or refund timeline\n\n## Product Information\n\n1. Access product database\n\n2. Share specifications and availability\n\n3. Provide pricing details\n\n## Payment Issues\n\n1. Identify specific payment problem\n\n2. Verify transaction details\n\n3. Explain resolution steps or escalate if needed\n\n# Tools and Resources\n\n* Use {{_actions.6b0414205ca594cd}} to maintain updated FAQ database\n\n* Use {{_actions.0b46b318198bb8b0}} for new common questions\n\n* Use {{_actions.f5b989eb14878309}} for new customer profiles\n\n* Use {{_actions.99ced99b4723d612}} to log interactions\n\n* Use {{_actions.68b415f32fa7a181}} for customer communications\n\n* Use {{_actions.482fb3cbc4e24efd}} for escalations\n\n* Use {{_actions.4ed944f704e366cd}} for tracking issue progress\n\n* Use {{_actions.3e004ebb39cdedbc}} for checking status\n\n# Examples\n\n## Example 1: Order Status Query\n\nUser: \"Where is my order?\" Response: \"I'll be happy to help you track your order. Could you please provide your order number? This will help me give you the most accurate information about your shipment.\"\n\n## Example 2: Return Request\n\nUser: \"I want to return my purchase.\" Response: \"I can help you with the return process. First, could you please provide your order number? This will help me verify the purchase and explain the specific return options available for your items.\"\n\n# Final Instructions\n\n* Always verify understanding before providing solutions\n\n* Keep responses clear and concise\n\n* Focus on resolving the immediate issue\n\n* Document all interactions\n\n* Escalate when necessary\n\n* Think carefully before each response\n\n* Use appropriate tools for each situation",
+  "model": "relevance-performance-optimized",
+  "knowledge": [],
+  "actions": [
+    {
+      "action_behaviour": "never-ask",
+      "emoji": ":globe_with_meridians:",
+      "title": "Extract Text From Website URL",
+      "description": "Extract text content from a specified website URL for easy access and analysis.",
+      "chain_id": "a428bd1b-1249-485b-bac7-bc96639b32c0",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c"
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/transformations/icons/general_data_transformation-gray.svg",
+      "title": "Summarize text",
+      "description": "",
+      "prompt_description": "Summarize long text using a moving window approach. Useful when content exceeds a regular LLM's context window.",
+      "chain_id": "bff1f89c-ed55-4a09-bf99-4ee3829421c9",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://userdata-f1db6c.stack.tryrelevance.com/files/public/1a53db87-6a2d-4def-8eee-91fe3d54df64/notebook-emoji-moz_logo.png/e17b2176-2592-4c18-98cc-e20119b044be.png",
+      "title": "Moz API V3 - Get x Ranking keywords",
+      "description": "Retrieve a list of keywords for which the provided site (domain, subdomain, subfolder, or page) is already ranking for.\n\n",
+      "chain_id": "b1eac279-fdbb-427d-b873-56aa17763cc1",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://userdata-f1db6c.stack.tryrelevance.com/files/public/1a53db87-6a2d-4def-8eee-91fe3d54df64/notebook-emoji-moz_logo.png/f890651a-d083-40d5-a530-99a18dfcd15c.png",
+      "title": "Moz API V3 - Fetch Search Intent",
+      "description": "Retrieve the most recent search intent scores (navigational, informational, commercial, and transactional) for any keyword that exists in our database.",
+      "chain_id": "bfa9555b-207f-42be-a3ef-cafc9b466cdc",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://userdata-bcbe5a.stack.tryrelevance.com/files/public/52b08f900d70-4f2f-b826-320ed7ee16c0/notebook-emoji-google.png/78b0b68c-adeb-4bc2-8c1a-7a41de9579da.png",
+      "title": "Google Search, Scrape and Summarise",
+      "description": "[Updated] Search the internet for information about a topic, person or company. Will scrape multiple of the top search results and filter for key information requested.",
+      "chain_id": "ea4715dd-4945-4ce9-967f-0422409f7f11",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://userdata-bcbe5a.stack.tryrelevance.com/files/public/4dc088f2dcfc-4e60-807e-353c334d4a5b/notebook-emoji-Google__G__logo.svg.png/347d5d47-3c67-4b99-8c32-545c0788b66c.png",
+      "title": "Perform Google Search",
+      "description": "Retrieve the latest information from the internet on a specified topic using Google Search.",
+      "chain_id": "42fac04e-ab40-4fb8-ab12-9282e3a0f558",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://userdata-f1db6c.stack.tryrelevance.com/files/public/1a53db87-6a2d-4def-8eee-91fe3d54df64/notebook-emoji-moz_logo.png/e951bb4e-9ecd-4cd5-b418-13d23def04e9.png",
+      "title": "Moz API V3 - Count Ranking Keywords",
+      "description": "Retrieve a summary of the number of keywords for which the provided query (domain, subdomain, or page) ranks in the top 50.",
+      "chain_id": "9c84cea4-5696-43e4-8d28-dbccb9215ab3",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/transformations/icons/general_data_transformation-gray.svg",
+      "title": "Convert a file to text",
+      "description": "",
+      "prompt_description": "Extract text from a file. Supports JSON, CSV, PDF and Word files.",
+      "chain_id": "79333335-6b9c-47a8-9e4f-cdcd01a93b1f",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_m02hd2/logo/orig",
+      "title": "Lettria - Classify Text",
+      "description": "",
+      "prompt_description": "Turn your text data into smarter decisions. End-to-end NLP solution.",
+      "chain_id": "7a7b1429-aa90-4866-9964-37e2f40969f9",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_168hNe/logo/orig",
+      "title": "Codeq Natural Language Processing API - Analyze Document",
+      "description": "",
+      "prompt_description": "Unlock meaning like never before. A robust set of tools for intelligent text understanding.",
+      "chain_id": "80615c0a-ef19-4bc1-833d-f903e463db13",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/transformations/icons/combine_data_to_array-gray.svg",
+      "title": "Filter list of objects",
+      "description": "",
+      "prompt_description": "Find items in a list of objects that satisfies a set of conditions.",
+      "chain_id": "5040ce33-6bbc-4983-85a7-4f8f5a024573",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_168hNe/logo/orig",
+      "title": "Codeq Natural Language Processing API - Check Similarity",
+      "description": "",
+      "prompt_description": "Unlock meaning like never before. A robust set of tools for intelligent text understanding.",
+      "chain_id": "70e88a01-f2a9-4ca5-96d6-32740f1b25d2",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/transformations/icons/combine_data_to_array-gray.svg",
+      "title": "Map list of objects",
+      "description": "",
+      "prompt_description": "Transform a list of objects into a new list of objects by mapping values to new fields.",
+      "chain_id": "a8abb608-141b-4c87-95fc-71a829ebb755",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask"
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_JQh76E/logo/orig",
+      "title": "ChatBotKit - Create Conversation",
+      "description": "",
+      "prompt_description": "ChatBotKit helps you create conversational AI chatbots with your own data to communicate naturally with users on your website, Slack, Discord and WhatsApp.",
+      "chain_id": "e5e2abf2-86bd-45b0-b3c5-6f9b31fcfe7e",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_JQh76E/logo/orig",
+      "title": "ChatBotKit - Send Conversation Message",
+      "description": "",
+      "prompt_description": "ChatBotKit helps you create conversational AI chatbots with your own data to communicate naturally with users on your website, Slack, Discord and WhatsApp.",
+      "chain_id": "4ea75346-4f94-4ddf-8902-60256db87424",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_M0hv9w/logo/orig",
+      "title": "Aidbase - Create FAQ",
+      "description": "",
+      "prompt_description": "Aidbase - AI-Powered support for your SaaS startup",
+      "chain_id": "fce6cffa-95ad-4890-b2ed-f0916f64775c",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_M0hv9w/logo/orig",
+      "title": "Aidbase - Add Question to FAQ",
+      "description": "",
+      "prompt_description": "Aidbase - AI-Powered support for your SaaS startup",
+      "chain_id": "aab2dbfc-7be3-4561-891b-051e605faea4",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1lxhwz/logo/orig",
+      "title": "Help Scout - Create Customer",
+      "description": "",
+      "prompt_description": "Simple Customer Service Software and Education",
+      "chain_id": "04961ba0-8fd7-4cbf-919d-28beb4b77b40",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1lxhwz/logo/orig",
+      "title": "Help Scout - Add Note to Conversation",
+      "description": "",
+      "prompt_description": "Simple Customer Service Software and Education",
+      "chain_id": "5003277f-a733-4c0d-85a1-3275d36a683c",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1lxhwz/logo/orig",
+      "title": "Help Scout - Send Reply",
+      "description": "",
+      "prompt_description": "Simple Customer Service Software and Education",
+      "chain_id": "1fea7ed1-e3ca-4362-b224-148b92eefd4e",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1lxhwz/logo/orig",
+      "title": "Help Scout - Send Reply",
+      "description": "",
+      "prompt_description": "Simple Customer Service Software and Education",
+      "chain_id": "6c956236-da92-4035-af13-198dfc9daade",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1lxhwz/logo/orig",
+      "title": "Help Scout - Send Reply",
+      "description": "",
+      "prompt_description": "Simple Customer Service Software and Education",
+      "chain_id": "f6fcc1e7-c26a-4109-9a2a-58aa11d80579",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Create Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "64dadba4-c17f-4f98-9c91-7a7bd7e8cb21",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Create Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "b67e4aa7-0d36-4d67-871e-ebeb56f25220",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Create Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "255a6ba0-b6cc-4145-9a02-629283e831aa",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Create Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "ac61633e-bc91-4493-bf3b-a741df7dee89",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "dc96b0b5-e4af-42ee-a0bd-68738b3eb9d5",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "4513788d-f4d0-4e1a-8cd3-f5814192df17",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "8cd9a411-1fc8-45aa-a999-fb672eaf2ef0",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "1cd38754-a0c5-4ad8-a228-6a28308f3fac",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "40ca30b2-32a6-488b-9731-e5ef3ada9852",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Update Ticket",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "410b61a6-f893-41da-959b-e775a856c91d",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "d6527019-612e-43cb-a0c6-57543e6b5890",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "a1026319-23aa-4edd-930d-f317481b471f",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "c222ad08-e1da-4794-b036-98a37e3c4d5e",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "56840351-f22a-460f-ba55-729a4671920c",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "9062fa35-c6d6-4036-8e87-164347734819",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "013f17f4-767d-4a16-b385-d382ebd3d7e0",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "emoji": "https://assets.pipedream.net/s.v0/app_1pbhGX/logo/orig",
+      "title": "Zendesk - Get Ticket Info",
+      "description": "",
+      "prompt_description": "Zendesk is award-winning customer service software trusted by 200K+ customers. Make customers happy via text, mobile, phone, email, live chat, social media.",
+      "chain_id": "0f6b434f-f263-4c27-9ce9-0b54e79bbe8c",
+      "project": "9e4be68f-bcbb-4001-a8ed-511a79bc8bb4",
+      "region": "f1db6c",
+      "action_behaviour": "never-ask",
+      "overrides": {
+        "params_schema": {
+          "properties": {
+            "oauth_account_id": {
+              "metadata": {
+                "is_fixed_param": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "action_behaviour": "always-ask",
+  "custom_metadata": {
+    "system_prompt": "You must explicitly call add_conversation_metadata tool whenever the metadata values (defined by the different input(s) to this tool and their descriptions) have changed. Ensure to keep the metadata up to date with information during your task particularly at the end when you've completed the task, before reporting back on your outcome, or calling another agent. Remember, if new information hasn't changed the metadata values there is no need to update them.",
+    "read_metadata_system_prompt": "Use the read_conversation_metadata tool ONLY when you need to access current metadata values that are not already available in your conversation context. Do not call this tool if metadata information is already present in the conversation history or context. Only use it when you specifically need to refresh or retrieve metadata that is missing from your current context to make informed decisions or take actions."
+  }
+}
